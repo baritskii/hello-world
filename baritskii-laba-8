@@ -1,0 +1,84 @@
+/*1*/
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{	setlocale(LC_ALL, "");
+    int  a;
+    cin >> a;
+cout << "Введите размер файла в байтах" << endl << "Размер в килобайтах равен";
+        cout << a / 1024;
+    return 0;
+}
+
+
+/*2*/
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{	setlocale(LC_ALL, "");
+	cout << "Введите величину отрезков А и В"<< endl;
+    int  a, b, z = 0;
+    cin >> a >> b;
+cout << "количество отрезков B, размещенных на отрезке A";
+    for (int m = a; m >= b; m -= b) {
+        z++;
+        }
+    cout << z;
+    return 0;
+}
+
+
+/*3*/
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{	setlocale(LC_ALL, "");
+	cout << "Введите величину отрезков А и В"<<endl;
+    int  a, b, z = 0;
+    cin >> a >> b;
+	cout << "длина незанятой части отрезка A";
+    for (int m = a; m >= b; m -= b) {
+        z+= b ;
+        }
+    cout << a - z ;
+    return 0;
+}
+
+
+/*4*/
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{{	setlocale(LC_ALL, "");
+	cout << "Введите двузначное число" << endl;
+    int  a, b, z = 0;
+    cin >> a;
+	cout << "Полученное в результате число";
+    cout << (a % 10) * 10 + a / 10;
+    return 0;
+}
+
+
+/*5*/
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{{	setlocale(LC_ALL, "");
+	cout << "Введите трехзначное число" << endl;
+    int  a, b, z = 0;
+    cin >> a;
+	cout << "Полученное в результате число";
+    cout << (a % 100) * 10 + a / 100;
+    return 0;
+}
+
+
