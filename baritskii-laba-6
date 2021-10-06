@@ -7,7 +7,7 @@ int main()
     int a, b ;
 	setlocale(LC_ALL, "");
 	cout << "Введите два числа ";
-    sin >> a >> b;
+    cin >> a >> b;
     swap(a, b);
     cout << a << " " << b;
     return 0;
