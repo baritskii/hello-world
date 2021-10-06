@@ -1,0 +1,71 @@
+/* 1 */
+#include <iostream>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "");
+	int a, b; 
+	cout << "Введите стороны треугольника";
+	cin >> a >> b;
+	cout << "S = " << a * b << endl << "P = " << " " << 2 * (a + b) << endl;
+	return 0;
+}
+/* 2 */
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "");
+	double d, p = 3.14;
+	cout << "Введите диаметр ";
+	cin >> d;
+	cout << d * p;
+	return 0;
+}
+/* 3 */
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "");
+	cout << "Введите два числа ";
+	double a, b;
+	cin >> a >> b;
+	cout << (a + b) / 2;
+	return 0;
+}
+/* 4 */
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main() {
+	setlocale(LC_ALL, "");
+	cout << "Введите два числа ";
+	double a, b;
+	cin >> a >> b;
+	cout << " a + b = " << pow(a, 2) + pow(b, 2) << endl
+		<< " a - b = " << pow(a, 2) - pow(b, 2) << endl
+		<< " a * b = " << pow(a, 2) * pow(b, 2) << endl
+		<< " a / b = " << pow(a, 2) / pow(b, 2) << endl;
+	return 0;
+}
+
+
+/* 5 */#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main() {
+	double a , b;
+	cin >> a >> b;
+	cout << abs(a) + abs (b)<< endl
+		<< abs(a) - abs(b) << endl
+		<< abs(a) * abs(b) << endl
+		<< abs(a) / abs(b) << endl;
+	return 0;
+}
