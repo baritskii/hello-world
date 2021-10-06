@@ -1,0 +1,95 @@
+/*1*/
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{	setlocale(LC_ALL, "");
+	cout << "Введите величину угла в грудусах";
+    double P = 3.14 , X ;
+    cin >> X;
+    cout << "X1 = " << X / (180 / P);
+
+    return 0;
+}
+/*2*/
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{	setlocale(LC_ALL, "");
+	cout << "Введите величину угла в радианах";
+    double P = 3.14 , X ;
+    cin >> X;
+    cout << "X1 = " << X / (P / 180);
+
+    return 0;
+}
+
+
+/*3*/
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{	setlocale(LC_ALL, "");
+	cout << "Введите массу конфет , цену за эту массу и массу во втором случае";
+    double  A, Y, X ;
+    cin >> X >> A >> Y;
+    cout << ( A / X ) * (Y + 1);
+
+    return 0;
+}
+
+
+/*4*/
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "");
+	cout << "Введите 2 скорости , изначальное расстояние и время движения";
+    int V1, V2, S , T ;
+    cin >> V2 >>  V1 >> S >> T ;
+    cout << abs(V2 - V1) * T + S << " or " << (V2 + V1) * T + S;
+    return 0;
+}
+
+
+/*5*/
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{	setlocale(LC_ALL, "");
+	cout << "Введите коэфиценты А и В";
+    double A, B ;
+    cin >> A >> B ;
+    cout << (-B / A) ;
+    return 0;
+}
+
+
+
+/*6*/
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{	setlocale(LC_ALL, "");
+	cout << "Введите коэфиценты системы уравнений ";
+    int A1, B1, C1, A2, B2, C2;
+    cin >> A1 >> B1 >> C1 >> A2 >> B2 >> C2;
+    if ((A1 * B2) - (A2 * B1) != 0) {
+        cout << "X1 = " << ((C1 * B2) - (C2 * B1)) / ((A1 * B2) - (A2 * B1)) << endl << "X2 = " << (A1 * C2 - A2 * C1 ) / (A1 * B2) - (A2 * B1);
+    }
+
+    return 0;
+}
+
