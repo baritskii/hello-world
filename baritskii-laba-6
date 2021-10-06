@@ -1,0 +1,107 @@
+/*1*/	
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a, b ;
+	setlocale(LC_ALL, "");
+	cout << "Введите два числа ";*/
+    sin >> a >> b;
+    swap(a, b);
+    cout << a << " " << b;
+    return 0;
+}
+/*2*/
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "");
+	cout << "Введите три числа ";*/
+    int a , b, c ;
+    cin >> a >> b >> c;
+    swap(a, c);
+    swap(b, c);
+    cout << a << " " << b << " " << c;
+    return 0;
+}
+/*3*/
+
+#include <iostream>
+using namespace std;
+int main()
+{
+setlocale(LC_ALL, "");
+	cout << "Введите три числа ";*/
+    int a , b, c ;
+    cin >> a >> b >> c;
+    swap(a, c);
+    swap(a, b);
+    cout << a << " " << b << " " << c;
+    return 0;
+}
+/*4*/
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "");
+	cout << "Введите число ";*/
+    int x  ;
+    cin >> x ;
+    cout << 3 * pow( x,6 ) - 6 * pow (x,2) - 7;
+    return 0;
+}
+/*5*/
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "");
+	cout << "Введите число ";*/
+    int x  ;
+    cin >> x ;
+    cout << 4 * pow( (x-3) ,6 ) - 6 * pow ((x-3),2) + 2;
+    return 0;
+}
+
+/*6*/
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x , y ;
+    "
+    cin >> x ;
+    y = x * x;
+    x = y * y;
+    y = x * x;
+    cout << y;
+    return 0;
+}
+
+/*7*/
+
+#include <iostream>
+using namespace std;
+int main()
+{	setlocale(LC_ALL, "");
+	cout << "Введите число , которое хотите возвести в 15 степень";*/
+    
+    int x , y ;
+    cin >> x ;
+    y = x * x;
+    x = x * y;
+    y = x * x;
+    x = y * x;
+    y = x * y;
+
+    cout << y ;
+    return 0;
+}
+
