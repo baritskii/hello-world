@@ -6,7 +6,7 @@ int main()
 {
     int a, b ;
 	setlocale(LC_ALL, "");
-	cout << "Введите два числа ";*/
+	cout << "Введите два числа ";
     sin >> a >> b;
     swap(a, b);
     cout << a << " " << b;
@@ -19,7 +19,7 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "");
-	cout << "Введите три числа ";*/
+	cout << "Введите три числа ";
     int a , b, c ;
     cin >> a >> b >> c;
     swap(a, c);
@@ -34,7 +34,7 @@ using namespace std;
 int main()
 {
 setlocale(LC_ALL, "");
-	cout << "Введите три числа ";*/
+	cout << "Введите три числа ";
     int a , b, c ;
     cin >> a >> b >> c;
     swap(a, c);
@@ -49,7 +49,7 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "");
-	cout << "Введите число ";*/
+	cout << "Введите число ";
     int x  ;
     cin >> x ;
     cout << 3 * pow( x,6 ) - 6 * pow (x,2) - 7;
@@ -62,7 +62,7 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "");
-	cout << "Введите число ";*/
+	cout << "Введите число ";
     int x  ;
     cin >> x ;
     cout << 4 * pow( (x-3) ,6 ) - 6 * pow ((x-3),2) + 2;
@@ -91,7 +91,7 @@ int main()
 using namespace std;
 int main()
 {	setlocale(LC_ALL, "");
-	cout << "Введите число , которое хотите возвести в 15 степень";*/
+	cout << "Введите число , которое хотите возвести в 15 степень";
     
     int x , y ;
     cin >> x ;
