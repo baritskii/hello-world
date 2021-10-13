@@ -1,0 +1,94 @@
+/*1*/
+
+#include <iostream>
+using namespace std;
+int main()
+{setlocale(LC_ALL, "");
+cout << "С начала суток прошло секунд :" << endl;
+    int x ;
+    cin >> x ;
+cout << "количество секунд, прошедших с начала последней минуты.";
+    cout << x % 60 ;
+    return 0;
+}
+
+
+/*2*/
+#include <iostream>
+using namespace std;
+int main()
+{setlocale(LC_ALL, "");
+cout << "Ведите целое число K, лежащее в диапазоне 1–365:" << endl;
+    int x ;
+    cin >> x ;
+cout <<"номер дня недели:";
+    cout << x % 7 ;
+    return 0;
+}
+
+/*3*/
+
+#include <iostream>
+using namespace std;
+int main()
+{setlocale(LC_ALL, "");
+cout << "Ведите целое число K, лежащее в диапазоне 1–365:" << endl;
+
+    int N,K ;
+    cin >> K >> N ;
+cout << "День недели под номером :";
+    if ((K + N - 1) % 7 == 0) {
+        cout << "7";
+    }
+    else {
+        cout << (K + N - 1) % 7;
+    }
+    return 0;
+}
+
+
+/*4*/
+
+#include <iostream>
+using namespace std;
+int main()
+{setlocale(LC_ALL, "");
+cout << "Введите стороны прямоугольника АВ и сторону квадрата С" << endl;
+
+    int a,b,c,z=0,i=0 ;	
+    cin >> a >> b >> c ;
+    // проверяю сколько в ширину квадратов длины C пройдет 
+    for (int v = b; v >= c; v -= c) {
+        z++;
+    }
+    //проверяю сколько в длину квадратов длины C пройдет 
+    for (int m = a; m >= c; m -= c) {
+        i++;
+    }
+	cout<< "количество квадратов, размещенных на прямоугольнике, а также площадь незанятой части прямоугольника";
+    cout << i * z << " " << a * b - i * z * c * c;
+    return 0;
+}
+
+
+/*5*/
+
+#include <iostream>
+using namespace std;
+int main()
+{setlocale(LC_ALL, "");
+cout << "Введите номер года" << endl;
+
+    int x ;
+    cin >> x ;
+cout << "номер столетия равен :" << endl;
+    if (x % 100 > 0) {
+        cout << x / 100 + 1;
+    }
+else {
+cout << x / 100;
+}
+
+    return 0;
+}
+
