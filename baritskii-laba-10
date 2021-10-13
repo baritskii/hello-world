@@ -1,0 +1,132 @@
+/*1*/
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{ setlocale(LC_ALL, "");
+	cout << "Введите два числа " << endl;
+    int  a, b ;
+    cin >> a >> b;
+    if (a > 2 && b <= 3) {
+        cout << "YES";
+    }
+    else {
+        cout << "NO";
+    }
+    return 0;
+}
+
+
+/*2*/
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{ setlocale(LC_ALL, "");
+	cout << "Введите три числа " << endl;
+    int  a, b, c ;
+    cin >> a >> b >> c;
+    if (a < b && b < c) {
+        cout << "YES";
+    }
+    else {
+        cout << "NO";
+    }
+    return 0;
+}
+
+
+/*3*/
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{ setlocale(LC_ALL, "");
+cout << "Введите число" << endl;
+    int  a ;
+    cin >> a ;
+    if (a > 9  && a < 100 && a % 2 == 0) {
+cout << "Данное число является четным двузначным" << endl;
+ 
+    }
+    else {
+cout << "Данное число НЕ является четным двузначным" << endl;
+    }
+    return 0;
+}
+
+
+/*4*/
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{setlocale(LC_ALL, "");
+    int  a ;
+    cin >> a ;
+    if ((a % 10 > (a / 10) % 10  && (a / 10) % 10 > a / 100 ) || ((a % 10 < (a / 10) % 10) && (a / 10) % 10 < a / 100)) {
+        cout << "Цифры данного числа образуют возрастающую или убывающую последовательность";
+    }
+    else {
+        cout << "Цифры данного числа НЕ образуют возрастающую или убывающую последовательность";
+    }
+    return 0;
+}
+
+
+/*5*/
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{setlocale(LC_ALL, "");
+    int  a ;
+    cin >> a ;
+    if (a == (a / 1000 + ((a /100) % 10) * 10 + (( a / 10) % 10) * 100 +(( a % 10) * 1000))) {
+        cout << "Данное число читается одинаково слева направо и справа налево";
+    }
+    else {
+        cout << "Число не читается с права на лево";
+    }
+    return 0;
+}
+
+
+/*6*/
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{setlocale(LC_ALL, "")
+cout << "Введите стороны треугольника";
+    int  a , b ,c ;
+    cin >> a >> b >> c ;
+    if ( sqrt(pow(a,2) + pow(b,2)) == c ) {
+        cout << "Треугольник со сторонами a, b, c является прямоугольным";
+    }
+    else {
+        cout << "Треугольник со сторонами a, b, c НЕ является прямоугольным";
+    }
+    return 0;
+}
+
+
+/*7*/
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{setlocale(LC_ALL, "");
+cout << " Введите стороны треугольника";
+    int  a , b ,c ;
+    cin >> a >> b >> c ;
+    if ( a < b + c && b < a + c && c < a + b) {
+        cout << "Существует треугольник со сторонами a, b, c";
+    }
+    else {
+        cout << "НЕ существует треугольник со сторонами a, b, c";
+    }
+    return 0;
+}
+
