@@ -1,0 +1,151 @@
+/*1*/
+#include <iostream>
+#include <cmath>
+#include <vector>
+using namespace std;
+
+
+int main() {
+	setlocale(LC_ALL, "");
+	cout << "Введите длину вашего массива : ";
+	int n, k, l;
+	double q = 0, m = 0;
+	cin >> n;
+	vector <int> a(n);
+	cout << "Введите диапозон элементов в массиве  : ";
+	cin >> k >> l;
+	cout << "Введите "<< n <<" элементов массива  : ";
+	for (int i = 0; i <= n - 1; i++) {
+		cin >> a[i];
+		if (i >= k - 1 && i <= l - 1) {
+
+			q += a[i];
+			m++;
+
+		}
+	}
+	cout << "Среднее арифметическое элементов массива с номерами от K до L включительно равно  : ";
+	cout << q / m << endl;
+}
+
+
+/*2*/#include <iostream>
+#include <cmath>
+#include <vector>
+using namespace std;
+
+
+int main() {
+	setlocale(LC_ALL, "");
+	cout << "Введите длину вашего массива : ";
+	int n, k, l;
+	double q = 0, m = 0;
+	cin >> n;
+	vector <int> a(n);
+	cout << "Введите "<< n <<" элементов массива  : ";
+	for (int i = 0; i <= n - 1; i++) {
+		cin >> a[i];
+	}
+	int z = 0;
+	for (int i = 0; i <= n - 3; i++) {
+		if (a[i + 2] - a[i + 1] != a[i + 1] - a[i]) {
+			z++;
+		}
+	}
+	if (z == 0) {
+		cout << "Разность прогрессии равна : " << a[1] - a[0] << endl;
+	}
+	else {
+		cout << "0"<<endl;
+	}
+
+}
+
+
+/*3*/#include <iostream>
+#include <cmath>
+#include <vector>
+using namespace std;
+
+
+int main() {
+	setlocale(LC_ALL, "");
+	cout << "Введите длину вашего массива : ";
+	int n, k, min =10000;
+	double q = 0, m = 0;
+	cin >> n;
+	vector <int> a(n);
+	cout << "Введите "<< n <<" элементов массива  : ";
+	for (int i = 0; i <= n - 1; i++) {
+		cin >> a[i];
+	}
+	for (int i = 1; i <= n - 1; i += 2) {
+		if (min > a[i]) {
+			min = a[i];
+		}
+	}
+	cout << "Минимальный четный элемент последовательности равен : " << min << endl;
+}
+
+
+/*4*/#include <iostream>
+#include <cmath>
+#include <vector>
+using namespace std;
+
+
+int main() {
+	setlocale(LC_ALL, "");
+	cout << "Введите длину вашего массива : ";
+	int n, k, min =10000;
+	double q = 0, m = 0;
+	cin >> n;
+	vector <int> a(n);
+	cout << "Введите "<< n <<" элементов массива  : ";
+	for (int i = 0; i <= n - 1; i++) {
+		cin >> a[i];
+	}
+	for (int i = 1; i <= n - 2; i ++) {
+		if (a[i] > a[i+1] && a[i] > a[i-1]) {
+			min = a[i];
+		}
+	}
+	cout << "Последний локальный максимум равен : " << min << endl;
+}
+
+
+/*5*/#include <iostream>
+#include <cmath>
+#include <vector>
+using namespace std;
+
+
+int main() {
+	setlocale(LC_ALL, "");
+	cout << "Введите длину вашего массива (2 элемента повторяющихся) : ";
+	int n, k, min =10000;
+	double q = 0, m = 0;
+	cin >> n;
+	vector <int> a(n);
+	cout << "Введите "<< n <<" элементов массива  : ";
+	for (int i = 0; i <= n - 1; i++) {
+		cin >> a[i];
+	}
+	int j = 0 , z= 0;
+	for ( j ; j <= n - 1; j++) {
+		for (int i = j+1 ; i <= n - 1; i++) {
+			if (a[j] == a[i]) {
+				cout << j+1 << endl << i << endl;
+				z += 1;
+				break;
+
+			}
+
+		}
+	}
+	if (z == 0) {
+		cout << "Повторяющихся элементов нет , попробуйте еще раз"<< endl;
+	}
+
+}
+
