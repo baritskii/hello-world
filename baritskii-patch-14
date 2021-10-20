@@ -1,0 +1,118 @@
+/*1*/
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+setlocale(LC_ALL, "");
+cout << "Введите диапозон чисел : ";
+	double B,A;
+	cin >> A >> B;
+	for (int z = A; z <= B; z += 1) {
+		for (int q = z; q > 0; q--) {
+			cout << z << " ";
+		}
+		cout << endl;
+	}
+}
+/*2*/
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "");
+	cout << "Введите длину отрезка а ";
+	double B, A, q = 0;
+	cin >> A;
+		cout << "Введите длину отрезка b ";
+	cin >> B;
+	for (int z = A; z >= B; z -= B) {
+		q = z;
+	}
+	cout << "Длина незанятой части отрезка A ";
+	cout << q - B<< endl;
+}
+
+/*3*/
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "");
+	cout << "Введите число : ";
+
+	double N, K = 0, q = 0;
+	cin >> N;
+	for (int z = 1; z <= N; z += K) {
+		K++;
+	}
+	cout << K;
+}
+/*4*/
+
+#include <iostream>
+#include <cmath>
+
+	using namespace std;
+
+	int main() {
+		setlocale(LC_ALL, "");
+		cout << "Введите процентную ставку : ";
+		double P, K = 0, q = 0, m = 0;
+		cin >> P;
+		P = (P / 100) + 1;
+		for (int z = 1000; z <= 1100; z *= P) {
+			q = z * P;
+			m++;
+		}
+		cout << "Через ";
+		cout << m << " месяц сумма вклада равна : " << q<<endl;
+	}
+/*5*/
+
+#include <iostream>
+#include <cmath>
+
+		using namespace std;
+
+		int main() {
+
+			setlocale(LC_ALL, "");
+			cout << "Введите 2 числа : ";
+			int a, b, c = 0, q = 0, m = 0, w;
+			cin >> a >> b;
+			while (b != 0) {
+				c = b;
+				b = a % c;
+				a = c;
+			}
+			cout << "Их НОД равен : ";
+			cout << c;
+		}
+/*6*/
+
+#include <iostream>
+#include <cmath>
+
+			using namespace std;
+
+			int main() {
+
+				setlocale(LC_ALL, "");
+				cout << "Введите число последовательности Фибоначи : ";
+				int a = 0, b = 1, N, q = 0, m = 2, w;
+				cin >> N;
+				while (b != N) {
+					q = b;
+					b = a + b;
+					a = q;
+					m++;
+				}
+				cout << "Номер числа в последовательности Фибоначи : ";
+				cout << m<< endl;
+			}
