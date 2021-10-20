@@ -1,0 +1,91 @@
+/*1*/
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "");
+	cout << "Введите цену товара ";
+	double a;
+	cin >> a;
+	cout << "Цена 0.1кг = " << 0.1 * a << endl
+		<< "Цена 0.2кг = " << 0.2 * a << endl
+		<< "Цена 0.3кг = " << 0.3 * a << endl
+		<< "Цена 0.4кг = " << 0.4 * a << endl
+		<< "Цена 0.5кг = " << 0.5 * a << endl
+		<< "Цена 0.6кг = " << 0.6 * a << endl
+		<< "Цена 0.7кг = " << 0.7 * a << endl
+		<< "Цена 0.8кг = " << 0.8 * a << endl
+		<< "Цена 0.9кг = " << 0.9 * a << endl ;
+
+
+
+
+}
+/*2*/
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "");
+	cout << "Введите число : ";
+	double n, q = 1, s = 1.1;
+	cin >> n;
+	for (int z = 0; z < n; z++) {
+		q = s * q;
+		s += 0.1;
+	}
+	cout << "Произведение 1.1 · 1.2 · 1.3 · . . . (N сомножителей) = " << q << endl;
+}
+/*3*/
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "");
+	cout << "Введите число : ";
+	double n, q = 0;
+	cin >> n;
+	for (int z = 1; z <= 2 * n - 1; z += 2) {
+		q += z;
+		cout << "Квадрат числа "<< sqrt(q) << " равен " << q << endl;
+	}
+}
+/*4*/
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "");
+	cout << "Введите 2 числа : ";
+	double n, A, q = 0;
+	cin >> A >> n;
+	for (int z = 0; z <= n; z += 1) {
+		q = q + pow(A, z);
+	}
+	cout << " 1 + A + A^2 + A^3 + . . . + A^N = " << q;
+}
+/*5*/
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "");
+	cout << "Введите 2 числа : ";
+	double n, A, q = 0;
+	cin >> A >> n;
+	for (int z = 0; z <= n; z += 1) {
+		q = q + pow(-A, z);
+	}
+	cout << "1 − A + A2 − A3 + . . . ± AN  = ";
+	cout << q << endl;
+}
