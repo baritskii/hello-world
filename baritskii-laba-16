@@ -1,0 +1,134 @@
+/*1*/
+#include <iostream>
+#include <cmath>
+#include <vector>
+
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL,"");
+	cout << "Введите длину вашего массива : ";
+	int N, q = 1;
+	cin >> N;
+	vector <int> a(N);
+	for (int z = 0; z <= N - 1; z++) {
+		cout << z + 1 << ") " << q << endl;
+		q += 2;
+	}
+}
+/*2*/
+
+#include <iostream>
+#include <cmath>
+#include <vector>
+
+	using namespace std;
+	int main() {
+		setlocale(LC_ALL, "");
+		cout << "Введите длину вашего массива : ";
+		int A, D, N, q = 0;
+		cin >> N;
+		cout << "Введите первый элемент геометрической последовательности : ";
+		cin >> A;
+		cout << "Введите знаменатель геометрической последовательности : ";
+		cin >> D;
+		vector <int> a(N);
+		for (int z = 0; z <= N - 1; z++) {
+			q = A * pow(D, z);
+			cout << z+1 << ") " << q << endl;
+		}
+
+	}
+/*3*/
+
+#include <iostream>
+#include <cmath>
+#include <vector>
+
+	using namespace std;
+	int main() {
+		setlocale(LC_ALL, "");
+		cout << "Введите длину вашего массива (N>2) : ";
+		int A, B, N, q = 0;
+		cin >> N; 
+
+		cout << "Ввести 2 первых элемента последовательности :";
+
+		cin >> A >> B;
+		q = A + B;
+		vector <int> a(N);
+		a[0] = A;
+		a[1] = B;
+		for (int z = 2; z <= N - 1; z++) {
+
+			a[z] = q;
+			q += a[z];
+		}
+		q = 1;
+		for (auto now : a) {
+			cout << q << ") " << now << endl;
+			q++;
+		}
+	}
+/*4*/
+
+#include <iostream>
+#include <cmath>
+#include <vector>
+
+	using namespace std;
+	int main() {
+		setlocale(LC_ALL, "");
+		cout << "Введите длину вашего массива : ";
+		int A, B, N, q = 0;
+		cin >> N;
+		vector <int> a(N);
+		int m = N - 1;
+		cout << "Введите " << N << " элементов вашего массива : ";
+		for (int z = 0; z <= N - 1; z++) {
+			cin >> a[z];
+		}
+		for (int z = 0; z <= N - 1; z++) {
+			if (z < m) {
+				cout << a[z] << endl << a[m] << endl;
+				m--;
+			}
+			else if (z = m) {
+				cout << a[z] << endl;
+				m -= 2;
+			}
+			else {
+				break;
+			}
+		}
+	}
+/*5*/
+#include <iostream>
+#include <cmath>
+#include <vector>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "");
+	int n;
+	cout << "Введите длину массива : ";
+	cin >> n;
+
+	vector <int> a(n);
+	cout << "Заполните массив : ";
+	for (int i = 0; i <= n - 1; i ++) {
+		cin >> a[i];
+
+	}
+	cout << "Числа под не четными номерами : ";
+	for (int i = 0; i <= n - 1; i += 2){
+		cout << a[i] << "  ";
+
+	}
+	cout << endl;
+	cout << "Числа под четными номерами : ";
+	for (int i = 1; i <= n - 1; i += 2) {
+		cout << a[i] << "  ";
+
+	}
+}
