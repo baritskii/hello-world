@@ -1,0 +1,158 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+void add(int n, int m, vector < vector <int> >& vec) {
+    for (int i = 0; i < n; i++) {
+        cout << endl;
+        for (int q = 0; q < m; q++) {
+            cin >> vec[i][q];
+        }
+    }
+}
+void vvod(int &n, int &m) {
+    cout << "Введите длину вашего массива : ";
+    cin >> m;
+    cout << "Введите ширину вашего массива : ";
+    cin >> n;
+}
+
+int main() {
+    setlocale(LC_ALL, "");
+    int n=0, m=0, y;
+    cout << "Введите номер задания : ";
+    cin >> y;
+
+
+
+    switch (y)
+    {
+    case 1: {
+        int a[100][100];
+        int m;
+
+        cout << "Введите сторону вашего массива : ";
+        cin >> m;
+
+        int i, j;
+        cout << "Введите " << m * m << " элементов вашего массива : " << endl;
+        for (i = 0; i < m; ++i) {
+            for (j = 0; j < m; ++j) {
+                cin >> a[i][j];
+            }
+        }
+
+        int i2;
+        for (i2 = 0; i2 < m / 2; ++i2) {
+            for (j = i2; j < m - i2; ++j) { cout << a[j][i2] << " "; }
+            for (i = i2 + 1; i <= m - i2 - 1; ++i) { cout << a[m - i2 - 1][i] << " "; }
+            for (j = m - i2 - 2; j >= i2; --j) { cout << a[j][m - i2 - 1] << " "; }
+            for (i = m - i2 - 2; i >= i2 + 1; --i) { cout << a[i2][i] << " "; }
+
+        }
+        cout << a[m / 2][m / 2] << " ";
+        return 0;
+        break;
+    }
+    case 2:
+    {
+        vvod(n, m);
+        int  q = 0, z = 0, k, f = 1;
+
+        cout << "Введите ряд в массиве : ";
+        cin >> k;
+        vector < vector <int> > a(n, vector <int>(m));
+
+        cout << "Введите таблицу : ";
+        add(n, m, a);
+        for (int q = 0; q <= m - 1; q++) {
+            z += a[k - 1][q];
+            f *= a[k - 1][q];
+        }
+        cout << "Сумма элементов " << k << " строчки равна : " << z << endl << "Произведение элементов " << k << " строчки равно : " << f << endl;
+
+        break;
+    }
+
+    case 3: {
+        vvod(n, m);
+        int  q = 0, z = 0, k, f = 1, min = 1000;
+
+        vector < vector <int> > a(n, vector <int>(m));
+
+        cout << "Введите таблицу : ";
+        add(n, m, a);
+        for (int i = 0; i <= n - 1; i++) {
+            for (int q = 0; q <= m - 1; q++) {
+                f *= a[i][q];
+            }
+            if (f < min) {
+                min = f;
+                k = i;
+            }
+            f = 1;
+        }
+        cout << "Номер ряда с наименьшим произведением : " << k + 1
+            << endl << "Произведение равно : " << min << endl;
+        break;
+    }
+
+
+    case 4: {
+        vvod(n, m);
+        int  q = 0, z = 0, k = 0, f = 1, min = 1000;
+        vector < vector <int> > a(n, vector <int>(m));
+
+        cout << "Введите таблицу : ";
+        add(n, m, a);
+        for (int i = 0; i <= n - 1; i++) {
+            for (int q = 0; q <= m - 1; q++) {
+                f += a[i][q];
+            }		for (int q = 0; q <= m - 1; q++) {
+
+                if (a[i][q] > f / m) {
+                    k++;
+                }
+
+            }
+            cout << i + 1 << ") " << k << endl;
+            k = 0;
+            f = 0;
+        }
+
+        break;
+    }
+    case 5: {
+        vvod(n, m);
+        int  q = 0, z = 0, k = 0, f = 1, min = 1000;
+        vector < vector <int> > a(n, vector <int>(m));
+
+        cout << "Введите таблицу : ";
+        add(n, m, a);
+        for (int i = 0; i <= n - 1; i++) {
+            for (int q = 0; q <= m - 1; q++) {
+
+                if (a[i][q] % 2 == 0) {
+                    k++;
+                }
+
+            }
+            if (k == 0) {
+                cout << "Строчка под номером " << i + 1 << " не содержит четных элементов. " << endl;
+                break;
+            }
+            k = 0;
+
+        }           
+        if (k == 0) {
+            cout << "0" << endl;
+            break;
+        }
+    }
+    default:
+        cout << 6 << '\n';
+        break;
+    }
+
+
+
+}
