@@ -1,0 +1,154 @@
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+
+int main() {
+	setlocale(LC_ALL, "");
+	int y;
+	cout << "Выберете номер задания : ";
+	cin >> y;
+	switch (y) {
+	case 1: {
+		cout << "Введите длину массива размера N : ";
+		int n, k, min = 10000, max = -10000;
+
+		cin >> n;
+		vector <int> a(n);
+		cout << "Введите " << n << " элементов массива A  : ";
+		for (int i = 0; i <= n - 1; i++) {
+			cin >> a[i];
+		}
+		for (int i = 0; i <= n - 2; i++) {
+			if (i < n - 2 && a[i] == a[i + 1]) {
+				a.erase(a.begin() + i+1 );
+				n--;
+			}
+		}
+		if (a[n - 2] == a[n - 1]) {
+			a.erase(a.begin() + n - 1);
+		}
+
+		for (auto now : a) {
+			cout << now << endl;
+		}
+		break;
+	}
+	case 2: {
+		int n;
+		cout << "Введите длину вашего массива : ";
+		cin >> n;
+		vector <int> a(n);
+		cout << "Введите " << n << " элементов массива A  : ";
+		for (int i = 0; i < n; i++) {
+			cin >> a[i];
+		}
+		int z = 0, ms, i = 0, q = 0;
+		for (auto now : a) {
+			for (auto naw : a) {
+				if (now == naw) {
+					z++;
+					ms = q;
+				}
+				q++;
+			}
+			if (z == 2) {
+				a.erase(a.begin() + ms);
+				a.erase(a.begin() + i);
+
+
+			}
+			q = 0;
+			z = 0;
+			i++;
+		}
+
+		for (auto now : a) {
+			cout << now << " ";
+		}
+		break;
+	}
+	case 3: {
+		cout << "Введите длину вашего массива : ";
+		int n;
+		cin >> n;
+		vector <int> a(n);
+		int Min = 100, Max = -100, min = 100, max = 1000;
+
+		cout << "Введите " << n << " значений вашего массива : ";
+		for (int i = 0; i <= n - 1; i++) {
+			cin >> a[i];
+			if (a[i] <= Min) {
+				Min = a[i];
+				min = i;
+			}
+			if (a[i] >= Max) {
+				Max = a[i];
+				max = i;
+			}
+		}
+
+
+		auto iter = a.cbegin();
+
+		a.emplace(iter + min, 0);
+
+		for (auto now : a) {
+
+			cout << now << endl;
+			if (now == Max) {
+				cout << "0" << endl;
+			}
+		}
+		break;
+	}
+	case 4: {
+		cout << "Введите длину вашего массива : ";
+		int n;
+		cin >> n;
+		vector <int> a(n);
+		int Min = 100, Max = -100, min = 100, max = 1000;
+
+		cout << "Введите " << n << " значений вашего массива : ";
+		for (int i = 0; i <= n - 1; i++) {
+			cin >> a[i];
+		}
+		for (int i = 0; i <= n - 1; i++) {
+			if (a[i] < 0) {
+				a.insert(a.begin() + i + 1, 0);
+				i++;
+			}
+		}
+
+		for (auto now : a) {
+			cout << now << endl;
+		}
+		break;
+	}
+	case 5: {
+		cout << "Введите длину вашего массива : ";
+		int n;
+		cin >> n;
+		vector <int> a(n);
+		int Min = 100, Max = -100, min = 100, max = 1000;
+
+		cout << "Введите " << n << " значений вашего массива : ";
+		for (int i = 0; i <= n - 1; i++) {
+			cin >> a[i];
+		}
+		for (int i = 0; i <= 2 * n - 2; i++) {
+			if (a[i] > 0) {
+				a.insert(a.begin() + i + 1, 0);
+				i++;
+			}
+		}
+
+		for (auto now : a) {
+			cout << now << endl;
+		}
+		break;
+
+	}
+	}
+}
