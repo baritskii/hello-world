@@ -1,0 +1,109 @@
+//1
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "");
+	cout << "Введите символ : ";
+	int n;
+	char m;
+	cin >> m;
+		cout << "Cимвол предшествующий: " 
+		<< char(int(m)-1) << "\n" 
+			<<"Cимвол следующий: "
+			<< char(int(m) + 1)<<endl;
+	}
+//2
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "");
+	cout << "Введите строчку : ";
+	int n;
+	char m;
+	string s;
+	getline(cin, s);
+	n = size(s);
+	for (int i = 0; i <= n - 1; i++) {
+		m = s[i];
+		cout << m << " ";
+	}
+
+}
+//3
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "");
+	cout << "Введите строчку : ";
+	int n,w=0;
+	char m;
+	int q, z;
+	q = int('a');
+	z = int('z');
+string s;
+	getline(cin, s);
+	n = size(s);
+	for (int i = 0; i <= n - 1; i++) {
+		if (s[i] >= q && s[i] <= z)
+			w++;
+	}
+	cout<< "Количество прописных букв равно : " << w;
+}
+
+
+//4
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "");
+	cout << "Введите строчку : ";
+	int n, w = 0;
+	char m;
+	int q, z;
+	q = int('a');
+	z = int('z');
+	string s;
+	getline(cin, s);
+	n = size(s);
+	for (int i = 0; i <= n - 1; i++) {
+		if (s[i] == 'C') {
+			cout << s[i];
+		}
+		cout << s[i];
+
+	}
+}
+
+
+//5
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "");
+    cout << "Введите s : ";
+    string s;
+    getline(cin, s);
+    cout << "Введите m : ";
+    string m;
+    getline(cin, m);
+    string::size_type pos{ 0 };
+    int num{ 0 };
+    while (true) {
+        pos = s.find(m, pos);
+        if (pos == string::npos) break;
+        pos += 2;
+        ++num;
+    }
+    cout << num << "\n";
+}
+
